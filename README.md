@@ -1,66 +1,92 @@
 # 🍽️ SpartaFeast Cafeteria Ordering System
 
-A console-based cafeteria ordering system built in **C++** as part of my CS101 course project. This program lets students browse cafeteria shops and place food orders, while staff can manage shops, menus, and view revenue reports.
+A console-based cafeteria ordering system written in **C++** for my CS101 course project.
+Students can browse shops and place food orders, while cafeteria staff can manage menus, mark orders as done, and view revenue reports — all through a simple text menu.
 
 ---
 
-## 📋 Features
+## ✨ Features
 
-**For Customers (Students):**
-- Create an account or log in
-- View all available cafeteria shops and their menus
-- Place orders from any shop
-- View personal order history with total amount spent
+### 👤 Customer Menu
+| # | Feature | Description |
+|---|---------|-------------|
+| 1 | View Shops | See all available cafeteria shops and sample items |
+| 2 | Place Order | Browse a shop's menu, pick quantities, and confirm |
+| 3 | My Orders | View full order history with status labels |
+| 4 | **Cancel an Order** | Cancel any of your **pending** orders |
+| 5 | **My Summary** | See total spent, spending per shop, and favourite item |
+| 6 | Logout | Return to the login screen |
 
-**For Staff:**
-- Add and remove cafeteria shops
-- Add and remove menu items with prices
-- View all orders placed by all customers
-- Generate revenue reports per shop
+### 🛠️ Staff Menu
+| # | Feature | Description |
+|---|---------|-------------|
+| 1 | View Shops | Overview of all shops and item counts |
+| 2 | Add New Shop | Create a new cafeteria shop |
+| 3 | Add Menu Item | Add a food item and price to a shop |
+| 4 | Remove Menu Item | Delete an item from a shop's menu |
+| 5 | Remove Shop | Remove a shop and all its items |
+| 6 | View All Orders | See every order placed by all customers |
+| 7 | **Mark Order as Done** | Change a pending order's status to **completed** |
+| 8 | **Revenue Report** | Overall summary, per-shop revenue table, top-selling items, and detailed breakdown |
+| 9 | **Dashboard Summary** | Quick glance at shops, items, and order stats |
+| 10 | Logout | Return to the login screen |
+
+---
+
+## 🗂️ Order Statuses
+
+| Status | Meaning |
+|--------|---------|
+| `PENDING` | Order placed, waiting to be prepared |
+| `COMPLETED` | Staff marked the order as done |
+| `CANCELLED` | Customer cancelled the order |
 
 ---
 
 ## 🛠️ How to Compile and Run
 
-Make sure you have a C++ compiler installed (like g++ or MinGW on Windows).
+Make sure you have **g++** installed.
 
-**On Windows (using g++):**
+**Windows (MinGW / g++):**
 ```bash
 g++ main.cpp -o spartafeast
 spartafeast.exe
 ```
 
-**On Linux/Mac:**
+**Linux / Mac:**
 ```bash
 g++ main.cpp -o spartafeast
 ./spartafeast
 ```
 
+No external libraries needed — just standard C++.
+
 ---
 
 ## 🔑 Default Accounts
 
-You can use these test accounts to try the program:
+| Username | Password | Role |
+|----------|----------|------|
+| student1 | pass123 | Customer |
+| student2 | pass456 | Customer |
+| staff1 | staff123 | Staff |
+| staff2 | staff456 | Staff |
 
-| Username  | Password  | Role     |
-|-----------|-----------|----------|
-| student1  | pass123   | Customer |
-| student2  | pass456   | Customer |
-| staff1    | staff123  | Staff    |
-| staff2    | staff456  | Staff    |
-
-You can also register your own account when you run the program.
+You can also register a new account when the program starts.
 
 ---
 
-## 💾 Data Storage
+## 💾 How Data is Saved
 
-The program saves data to simple `.txt` files in the same folder:
-- `shops.txt` — stores all shop and menu data
-- `orders.txt` — stores all placed orders
-- `users.txt` — stores registered user accounts
+The program saves everything to plain `.txt` files in the same folder:
 
-These files are created automatically when you run the program.
+| File | Contents |
+|------|----------|
+| `shops.txt` | All shop names and menu items |
+| `orders.txt` | All orders with status and items |
+| `users.txt` | Registered user accounts |
+
+These files are created automatically — you don't need to make them yourself.
 
 ---
 
@@ -69,31 +95,62 @@ These files are created automatically when you run the program.
 ```
 SpartaFeast/
 │
-├── main.cpp        ← main source code (everything is here)
-├── shops.txt       ← auto-generated when shops are added
-├── orders.txt      ← auto-generated when orders are placed
-├── users.txt       ← auto-generated when accounts are created
-└── README.md       ← you are here
+├── main.cpp        ← all source code is here (single file)
+├── shops.txt       ← auto-created when shops are added
+├── orders.txt      ← auto-created when orders are placed
+├── users.txt       ← auto-created when accounts are registered
+└── README.md       ← this file
 ```
 
 ---
 
-## 🧠 What I Learned
+## 📸 Sample Screens
 
-This project helped me practice:
-- C++ structs and vectors
-- File input/output (reading and writing `.txt` files)
-- Functions and modular programming
-- Basic user authentication logic
-- Console-based menu systems
+```
+  SpartaFeast  |  student1  (CUSTOMER)
+==============================================================
+
+  1. View Shops
+  2. Place Order
+  3. My Orders
+  4. Cancel an Order
+  5. My Summary
+  6. Logout
+```
+
+```
+==================================================
+  ORDER SUMMARY
+==================================================
+  Shop : Manang's Kitchen
+--------------------------------------------------
+  Item                    Qty   Unit      Subtotal
+--------------------------------------------------
+  Adobo Rice              2     P55.00    P110.00
+  Sago't Gulaman          1     P30.00    P30.00
+--------------------------------------------------
+                                TOTAL:   P140.00
+==================================================
+```
 
 ---
 
-## 📌 Notes
+## 🧠 What I Practiced
 
-- This is my first major C++ project so the code might not be perfect!
-- The revenue report only shows orders with `completed` status (a future improvement would be adding an order status update feature for staff).
-- Passwords are stored as plain text — I know this isn't secure, but it's just a school project for now 😅
+- C++ structs and vectors
+- File I/O with `ifstream` and `ofstream`
+- Functions and modular code organization
+- Console formatting with `iomanip`
+- Basic authentication logic
+- Order status tracking (pending → completed / cancelled)
+
+---
+
+## 📌 Known Limitations
+
+- Passwords are stored as plain text (this is a school project, not a real app)
+- No admin account to manage users
+- Data files can get corrupted if the program crashes mid-save
 
 ---
 

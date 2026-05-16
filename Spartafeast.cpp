@@ -2,9 +2,6 @@
     SpartaFeast Cafeteria Ordering System
     A simple console-based ordering system for students and staff.
 
-    Author: [Your Name]
-    Date: May 2026
-    Course: CS101 - Introduction to Programming
 */
 
 #include <iostream>

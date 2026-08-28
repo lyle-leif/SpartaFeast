@@ -1,13 +1,13 @@
-# 🍽️ SpartaFeast Cafeteria Ordering System
+# SpartaFeast Cafeteria Ordering System
 
 A console-based cafeteria ordering system written in **C++** for my CS101 course project.
 Students can browse shops and place food orders, while cafeteria staff can manage menus, mark orders as done, and view revenue reports — all through a simple text menu.
 
 ---
 
-## ✨ Features
+## Features
 
-### 👤 Customer Menu
+### Customer Menu
 | # | Feature | Description |
 |---|---------|-------------|
 | 1 | View Shops | See all available cafeteria shops and sample items |
@@ -17,7 +17,7 @@ Students can browse shops and place food orders, while cafeteria staff can manag
 | 5 | **My Summary** | See total spent, spending per shop, and favourite item |
 | 6 | Logout | Return to the login screen |
 
-### 🛠️ Staff Menu
+### Staff Menu
 | # | Feature | Description |
 |---|---------|-------------|
 | 1 | View Shops | Overview of all shops and item counts |
@@ -33,7 +33,7 @@ Students can browse shops and place food orders, while cafeteria staff can manag
 
 ---
 
-## 🗂️ Order Statuses
+## Order Statuses
 
 | Status | Meaning |
 |--------|---------|
@@ -63,7 +63,7 @@ No external libraries needed — just standard C++.
 
 ---
 
-## 🔑 Default Accounts
+## Default Accounts
 
 | Username | Password | Role |
 |----------|----------|------|
@@ -76,7 +76,7 @@ You can also register a new account when the program starts.
 
 ---
 
-## 💾 How Data is Saved
+## How Data is Saved
 
 The program saves everything to plain `.txt` files in the same folder:
 
@@ -90,7 +90,7 @@ These files are created automatically — you don't need to make them yourself.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 SpartaFeast/
@@ -104,7 +104,7 @@ SpartaFeast/
 
 ---
 
-## 📸 Sample Screens
+## Sample Screens
 
 ```
   SpartaFeast  |  student1  (CUSTOMER)
@@ -135,7 +135,7 @@ SpartaFeast/
 
 ---
 
-## 🧠 What I Practiced
+## What I Practiced
 
 - C++ structs and vectors
 - File I/O with `ifstream` and `ofstream`
@@ -146,7 +146,7 @@ SpartaFeast/
 
 ---
 
-## 📌 Known Limitations
+## Known Limitations
 
 - Passwords are stored as plain text (this is a school project, not a real app)
 - No admin account to manage users
@@ -154,7 +154,7 @@ SpartaFeast/
 
 ---
 
-## 👤 Author
+## Author
 
 - **Name:** Lyle Daniel M. Esguerra
 - **Course:** CS1203 - Data Structures and Algorithm
